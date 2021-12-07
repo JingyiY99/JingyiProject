@@ -21,7 +21,7 @@ Nanocellulose, alibaba.com
 We should find whether the NC enhnced gel has better gel quality and the relationship between the dosage of NC and gel quality.  
 
 ## Data Description
-I make some gel samples with different NC dasage: no NC, 0.1% NC， 0.5% NC, and 1.0% NC. Then we need to collect data to compare their gel quality.  
+I make some gel samples with different NC dasage: no NC, 0.1%wt NC， 0.5%wt NC, and 1.0%wt NC. Then we need to collect data to compare their gel quality.  
 Texture Profile Analysis (TPA) test is useful to measure the gel properties like hardness, cohesiveness, springiness, chewiness, resilience, and gel strength. To determine the gel quality of our samples, we will focus on hardness and gel strength, but other properties can help us find the relationship between NC dasage and gel properties.  
 The data I use to analyze is measured on November 12th 2021 by TPA machine in Food Science Building. You can find it <a href="https://github.com/JingyiY99/JingyiProject/blob/master/assets/Result_11.12.csv" download>here</a>.  
 
@@ -211,7 +211,7 @@ p
 ![alt text](/JingyiProject/assets/pca2.PNG)  
 From the plots, we can see the PC1 and PC2 separate the data. The PCA method successfully reduces the variables and simulates a good enough model.
 ## Communciate and visualize the results
-We find the appropriate Nanocellulose can increase the gel quality from the Data Visualization part. Based on the boxplots, the 0.5% NC enhanced gel has the best performance.  
+We find the appropriate Nanocellulose can increase the gel quality from the Data Visualization part. Based on the boxplots, the 0.5%wt NC enhanced gel has the best performance. Both the lower dosage (0.1%wt) and higher dosage (1.0%wt) will decrease the gel quality.
 The Machine Learning models are helpful to fit my data and simulate the relationship. The performence score for Naive Bayes is 0.6, for SVM is 0.909. The variance check for PCA model is good enough, too. With these models, I can predict the results for new data in the future.  
 The next step for my research is to test the NC dosage around 0.5%, like 0.3~0.8%, to find a more accurate dosage.  
 In this project, I applicate many topics I learned in ABE 516x. For example:  
@@ -220,6 +220,6 @@ In this project, I applicate many topics I learned in ABE 516x. For example:
 (3)Use different machine learning tools that I learned in class to fit my data and make predictions.  
 My project is easy to reproduce. You can find the data I used <a href="https://github.com/JingyiY99/JingyiProject/blob/master/assets/Result_11.12.csv" download>here</a>. The TPA test data has its global standard. Therefore, everyone can use their data measured by the TPA test to replace the data in my code. If your data has a different number of features, there would be some error, so please change the number of features in my code to fit your data. The other procedure is the same as I do. The data analysis method I used in the project is reproducible and easy to work through. 
 ## Task for Class
-
+Water holding capacity(WHC) is also important for surimi gel production. <a href="https://github.com/JingyiY99/JingyiProject/blob/master/assets/WHC_12.2.csv" download>Here</a> is the WHC data for different NC enhanced gel. Please follow what I did in the Data Visualization part and make a boxplot to show the relationship between WHC and NC dosage. This time you only have one feature to analyze.  
 ## Data Workflow Chart
 ![Book logo](/JingyiProject/assets/Project Workflow.png)
