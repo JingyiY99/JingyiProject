@@ -63,11 +63,11 @@ sum3
 Results for no NC enhanced gel:  
 ![Book logo](/JingyiProject/assets/no NC sum.PNG)  
 Results for 0.1% NC enhanced gel:  
-![alt text](/JingyiProject/assets/no NC sum.PNG)  
+![alt text](/JingyiProject/assets/0.1%_NC_sum.PNG)  
 Results for 0.5% NC enhanced gel:  
-![alt text](/JingyiProject/assets/0.5% NC sum.PNG)  
+![alt text](/JingyiProject/assets/0.5%_NC_sum.PNG)  
 Results for 1.0% NC enhanced gel:  
-![alt text](/JingyiProject/assets/1.0% NC sum.PNG)  
+![alt text](/JingyiProject/assets/1.0%_NC_sum.PNG)  
 There is no obvious issue based on the preliminary summary. Let's dig depper.  
 
 ## Data Visualization
@@ -102,6 +102,14 @@ for n in x:
     ax.set_xticklabels(['0%wt','0.1%wt', '0.5%wt', '1.0%wt']) 
     plt.show(bp)
 ```
+![alt text](/JingyiProject/assets/hardness.PNG)  
+![alt text](/JingyiProject/assets/Cohesiveness.PNG)  
+![alt text](/JingyiProject/assets/Springiness.PNG)  
+![alt text](/JingyiProject/assets/Gumminess.PNG)  
+![alt text](/JingyiProject/assets/Chewiness.PNG)  
+![alt text](/JingyiProject/assets/Resilience.PNG)  
+![alt text](/JingyiProject/assets/Gel Strength.PNG)  
+From the boxplots, we can compare the features of difeerent NC dosage. The hardness and gel strength graphs show that no NC and 0.5% NC enhanced gel has better gel quality. Then we can compare the other features and find that 0.5% NC enhanced gel perform better on other features than no NC enhanced gel does. Therefore, we can conclude that NC enhanced gel can increase the gel quality and 0.5% NC dosage performs the better results.  
 
 ## Model the data (Machine Learning)
 ### Naive Bayes
