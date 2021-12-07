@@ -63,11 +63,11 @@ sum3
 Results for no NC enhanced gel:  
 ![Book logo](/JingyiProject/assets/no NC sum.PNG)  
 Results for 0.1% NC enhanced gel:  
-![Book logo](/JingyiProject/assets/0.1% NC sum.PNG)  
+![alt text](/JingyiProject/assets/0.1% NC sum.PNG)  
 Results for 0.5% NC enhanced gel:  
-![Book logo](/JingyiProject/assets/0.5% NC sum.PNG)  
+![alt text](/JingyiProject/assets/0.5% NC sum.PNG)  
 Results for 1.0% NC enhanced gel:  
-![Book logo](/JingyiProject/assets/1.0% NC sum.PNG)  
+![alt text](/JingyiProject/assets/1.0% NC sum.PNG)  
 There is no obvious issue based on the preliminary summary. Let's dig depper.  
 
 ## Data Visualization
