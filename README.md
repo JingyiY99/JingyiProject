@@ -121,8 +121,5 @@ From the boxplots, we can compare the features of difeerent NC dosage. The hardn
 ## Communciate and visualize the results
 
 
-## Conclusion
-
-
 ## Data Workflow Chart
 ![Book logo](/JingyiProject/assets/Project Workflow-1.png)
