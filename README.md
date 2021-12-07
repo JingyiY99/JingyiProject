@@ -112,8 +112,31 @@ for n in x:
 From the boxplots, we can compare the features of difeerent NC dosage. The hardness and gel strength graphs show that no NC and 0.5% NC enhanced gel has better gel quality. Then we can compare the other features and find that 0.5% NC enhanced gel perform better on other features than no NC enhanced gel does. Therefore, we can conclude that NC enhanced gel can increase the gel quality and 0.5% NC dosage performs the better results.  
 
 ## Model the data (Machine Learning)
+After using the data visualization method, let's use the Machine Learning method the model the data and compare the performence score of the models.
 ### Naive Bayes
-
+While most machine learning models try to predict values from the broad population, Bayesian Statistics can help us determine whether the data confirms or refutes our hypothesis more easily. It provides an easier way to get prior information from data. It can help you design your experiment with Bayesian probability. The use of Bayesian Statistics is broad that fits a wide range of the model. Naive Bayes assumes that all predictors are independent. This assumption limits the applicability of this algorithm in real-world use cases.
+```python
+# imports 
+import pandas as pd 
+import seaborn as sns 
+import statsmodels.formula.api as smf 
+from sklearn.linear_model import LinearRegression 
+from sklearn import metrics 
+from sklearn.model_selection import train_test_split 
+import matplotlib.pyplot as plt 
+import numpy as np 
+# allow plots to appear directly in the notebook 
+%matplotlib inline 
+  
+X = np.stack((df["Hardness"], df["Cohesiveness"], df["Springiness"], df["Gumminess"], df["Chewiness"], df["Resilience"],df["Gel Strength"]), axis=1) 
+Y = df["Dosage"]*10 #sklearn CAN NOT read the decimal like 0.1, so I multiply them ny 10 to get integer. Therefore, 0 is no NC, 1 is 0.1% NC, 5 is 0.5% NC, 10 is 1% NC 
+from sklearn.naive_bayes import GaussianNB
+clf = GaussianNB()
+clf.fit(X, Y)  #Fit Gaussian Naive Bayes according to X, y.
+GaussianNB()
+clf.score(X, Y, sample_weight=None)
+```
+The performence score of Naive Bayes model is 0.6. It's larger than 0.5 but not large enough. Let's see next model.
 ### SVM
 
 ### K-means
