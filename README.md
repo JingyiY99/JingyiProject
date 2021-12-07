@@ -37,7 +37,7 @@ df = pd.read_csv('Result_11.12.csv')
 df = df.drop(columns=["Distance1","Distance2","Area1","Area2","Area3","Area4"])
 df
 ```
-![Book logo](/JingyiProject/assets/Raw data.PNG)
+![Book logo](/JingyiProject/assets/Raw data.PNG)  
 Then we can calculate the means and standard deviations for each dosage to describe the basic statistics of the features.
 ```python
 class0 = df[df["Dosage"]==0]
@@ -63,7 +63,7 @@ sum3
 Results for no NC enhanced gel:  
 ![Book logo](/JingyiProject/assets/no NC sum.PNG)  
 Results for 0.1% NC enhanced gel:  
-![alt text](/JingyiProject/assets/0.1% NC sum.PNG)  
+![alt text](/JingyiProject/assets/no NC sum.PNG)  
 Results for 0.5% NC enhanced gel:  
 ![alt text](/JingyiProject/assets/0.5% NC sum.PNG)  
 Results for 1.0% NC enhanced gel:  
@@ -71,7 +71,37 @@ Results for 1.0% NC enhanced gel:
 There is no obvious issue based on the preliminary summary. Let's dig depper.  
 
 ## Data Visualization
-
+Boxplot is a good visualization method to show the replationships between NC dosage and each features.
+```python
+def features(x): 
+ """"" 
+ Find the features by x. 
+ """""
+ if x == 0: 
+    return "Hardness" 
+ elif x == 1: 
+    return "Cohesiveness"
+ elif x == 2: 
+    return "Springiness"
+ elif x == 3: 
+    return "Gumminess"
+ elif x == 4: 
+    return "Chewiness"
+ elif x == 5: 
+    return "Resilience"
+ elif x == 6: 
+    return "Gel Strength"
+    
+x = np.arange(0,7) 
+for n in x: 
+    data = [class0[features(n)],class1[features(n)], class2[features(n)], class3[features(n)]] 
+    fig = plt.figure(figsize =(10, 7)) 
+    ax = fig.add_subplot(111) 
+    bp = ax.boxplot(data) 
+    plt.title('Dosage(%wt) vs. '+ features(n))
+    ax.set_xticklabels(['0%wt','0.1%wt', '0.5%wt', '1.0%wt']) 
+    plt.show(bp)
+```
 
 ## Model the data (Machine Learning)
 ### Naive Bayes
