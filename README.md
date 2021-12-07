@@ -112,7 +112,7 @@ for n in x:
 From the boxplots, we can compare the features of difeerent NC dosage. The hardness and gel strength graphs show that no NC and 0.5% NC enhanced gel has better gel quality. Then we can compare the other features and find that 0.5% NC enhanced gel perform better on other features than no NC enhanced gel does. Therefore, we can conclude that NC enhanced gel can increase the gel quality and 0.5% NC dosage performs the better results.  
 
 ## Model the data (Machine Learning)
-After using the data visualization method, let's use the Machine Learning method the model the data and compare the performence score of the models.
+After using the data visualization method, let's use the Machine Learning method the model the data and compare the performence of these models.
 ### Naive Bayes
 While most machine learning models try to predict values from the broad population, Bayesian Statistics can help us determine whether the data confirms or refutes our hypothesis more easily. It provides an easier way to get prior information from data. It can help you design your experiment with Bayesian probability. The use of Bayesian Statistics is broad that fits a wide range of the model. Naive Bayes assumes that all predictors are independent. This assumption limits the applicability of this algorithm in real-world use cases.
 ```python
@@ -168,8 +168,48 @@ classifier.score(X_train,Y_train, sample_weight=None)
 ```
 The performence score of SVM model is 0.909. It's good enough to fit my data.
 ### PCA
+Naive Bayes and SVM are both supervised learning model that uses training data to learn a relationship between the input and the outputs. In an unsupervised learning model like PCA and kmeans, only input data will be given. Unsupervised learning does not use output data.   
+There are too many property variables. I want to reduce the number of variables and ensure my variables are independent of one another. In this case, it's comfortable making the independent variables less interpretable. Therefore, I will use the PCA method to analyze my data.  
+PCA method can reduce correlated features, reduce overfitting, and improve visualization by reducing variables. It has disadvantages that the independent variables will become less interpretable. Before using the PCA method, we should standardize the data. Otherwise, PCA will not be able to find the optimal principal components.  
+```python
+%matplotlib inline 
+import seaborn as sns; sns.set()
+  
+print(df.shape)
+```
+The data shape is (15,8)  
+```python
+from sklearn.preprocessing import StandardScaler
 
-PCA method can reduce correlated features, reduce overfitting, and improve visualization by reducing variables. It has disadvantages that the independent variables will become less interpretable. Before using the PCA method, we should standardize the data. Otherwise, PCA will not be able to find the optimal principal components.
+X_data = df.iloc[:, 1:7]
+Y_data = df.iloc[:,0]
+
+scaled_data = StandardScaler()
+scaled_X = scaled_data.fit_transform(X_data)
+  
+from sklearn.decomposition import PCA
+
+pca1 = PCA(n_components=4)
+pca1.fit(scaled_X)
+train_pca1 = pca1.transform(scaled_X)  
+  
+pc_df = pd.DataFrame(data = train_pca1, columns = ['PC1', 'PC2','PC3','PC4'])
+pc_df['Dosage'] = Y_data
+pc_df
+  
+pca1.explained_variance_ratio_
+  
+df = pd.DataFrame({'var':pca1.explained_variance_ratio_, 'PC':['PC1','PC2','PC3','PC4']})
+sns.barplot(x='PC',y="var", data=df, color="red");
+```
+![alt text](/JingyiProject/assets/PCA1.PNG)  
+From the graph, it's obvious that PC1 and PC2 will be a good approximation for my data analysis.  
+```python
+p = sns.lmplot( x="PC1", y="PC2", data=pc_df, fit_reg=False, hue='Dosage', legend=True) 
+p
+```
+![alt text](/JingyiProject/assets/pca2.PNG)  
+From the plots, we can see the PC1 and PC2 separate the data. The PCA method successfully reduces the variables and simulates a good enough model.
 ## Communciate and visualize the results
 
 
