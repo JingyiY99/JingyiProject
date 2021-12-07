@@ -138,7 +138,35 @@ clf.score(X, Y, sample_weight=None)
 ```
 The performence score of Naive Bayes model is 0.6. It's larger than 0.5 but not large enough. Let's see next model.
 ### SVM
-
+SVM method is broadly used in classification problems. It plots each dataset in n-dimensional space with the value of a particular coordinate. Then, it will find the hyper-plane that differentiates the classes very well. SVM is more effective in high dimensional spaces, especially where the number of dimensions is greater than the number of samples. SVM algorithm is not suitable for large data sets with more noise.   
+```python
+%matplotlib inline 
+import numpy as np 
+import matplotlib.pyplot as plt 
+from scipy import stats 
+import pandas as pd 
+from pandas import DataFrame 
+ 
+# use seaborn plotting defaults 
+import seaborn as sns; sns.set()   
+  
+X = X = np.stack((df["Hardness"], df["Cohesiveness"], df["Springiness"], df["Gumminess"], df["Chewiness"], df["Resilience"],df["Gel Strength"]), axis=1)
+y = df["Dosage"]*10
+  
+from sklearn.model_selection import train_test_split 
+X_train, X_test, Y_train, Y_test = train_test_split(X, y, test_size = 0.25, random_state = 0) 
+  
+from sklearn.preprocessing import StandardScaler 
+sc = StandardScaler() 
+X_train = sc.fit_transform(X_train) 
+  
+from sklearn.svm import SVC 
+classifier = SVC(kernel = 'linear', C=1, random_state = 0) 
+classifier.fit(X_train, Y_train) 
+  
+classifier.score(X_train,Y_train, sample_weight=None)
+```
+The performence score of SVM model is 0.909. It's good enough to fit my data.
 ### K-means
 
 ## Communciate and visualize the results
