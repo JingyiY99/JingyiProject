@@ -26,7 +26,14 @@ Texture Profile Analysis (TPA) test is useful to measure the gel properties like
 The data I use to analyze is measured on November 12th 2021 by TPA machine in Food Science Building. You can find it <a href="https://github.com/JingyiY99/JingyiProject/blob/master/assets/Result_11.12.csv" download>here</a>.  
 
 ## Explore the Data
-
+First, let's take a look at our <a href="https://github.com/JingyiY99/JingyiProject/blob/master/assets/Result_11.12.csv" download>data</a>. Make sure there is no negative valuses and NA values. 
+```python
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+%matplotlib inline
+```
+Then we can calculate the means and standard deviations for each dosage.
 
 ## Data Visualization
 
