@@ -23,7 +23,7 @@ We should find whether the NC enhnced gel has better gel quality and the relatio
 ## Data Description
 I make some gel samples with different NC dasage: no NC, 0.1% NC， 0.5% NC, and 1.0% NC. Then we need to collect data to compare their gel quality.  
 Texture Profile Analysis (TPA) test is useful to measure the gel properties like hardness, cohesiveness, springiness, chewiness, resilience, and gel strength. To determine the gel quality of our samples, we will focus on hardness and gel strength, but other properties can help us find the relationship between NC dasage and gel properties.  
-The data I use to analyze is measured on November 12th 2021 by TPA machine in Food Science Building. You can download it here. <a href="https://github.com/JingyiY99/JingyiProject/blob/master/assets/Result_11.12.csv" download>Click to Download</a>  
+The data I use to analyze is measured on November 12th 2021 by TPA machine in Food Science Building. You can download it here. <a href="https://github.com/JingyiY99/JingyiProject/blob/master/assets/Result_11.12.csv" download>Click to open it</a>  
 
 ## Explore the Data
 
