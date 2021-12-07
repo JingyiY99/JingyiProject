@@ -168,9 +168,10 @@ classifier.score(X_train,Y_train, sample_weight=None)
 ```
 The performence score of SVM model is 0.909. It's good enough to fit my data.
 ### PCA
+
 PCA method can reduce correlated features, reduce overfitting, and improve visualization by reducing variables. It has disadvantages that the independent variables will become less interpretable. Before using the PCA method, we should standardize the data. Otherwise, PCA will not be able to find the optimal principal components.
 ## Communciate and visualize the results
 
 
 ## Data Workflow Chart
-![Book logo](/JingyiProject/assets/Project Workflow-1.png)
+![Book logo](/JingyiProject/assets/Project Workflow.png)
