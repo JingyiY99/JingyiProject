@@ -13,18 +13,17 @@ Most surimi gel is made by fresh fish because the frozen-stored process will deg
 Surimi gel we made  
   
 Finding innovative ways to produce high-quality surimi from frozen-stored Asian carps will use an under-utilized food source to create high-value products and provide a strong economic incentive to reduce these invasive species and lessen their detrimental environmental, ecological impacts on the great lakes and Mississippi River systems.  
-There are two methods to increase the protein's cross-linking ability: Nanocellulose (NC) and Microbial transglutaminase (mTG). NC is a good gel enhancer that makes network into proteins to help cross-link and increase the water holding capacity. NC also has some health benefits like improving bowel movement, promoting healthy microbiota in digestive tract, and trapping heavy metals out of harm’s way. mTG is a useful protein crosslinker that has become food glue in food industry.  
+There is a methods to increase the protein's cross-linking ability: Nanocellulose (NC). NC is a good gel enhancer that makes network into proteins to help cross-link and increase the water holding capacity. NC also has some health benefits like improving bowel movement, promoting healthy microbiota in digestive tract, and trapping heavy metals out of harm’s way. 
   
 ![Book logo](/JingyiProject/assets/H2aa39567e41e40298725ebd72b9b69535.png)  
 Nanocellulose, alibaba.com  
   
-![Book logo](/JingyiProject/assets/H232fb48aacfe4e5c915d5374611fa6efK.jpg)  
-Food Transglutaminase, aliexpress.com  
-  
-Our key hypothesis is NC and mTG have the synergistic effects to produce high-quality surimi from frozen-stored Asian Carps.  
+We should find whether the NC enhnced gel has better gel quality and the relationship between the dosage of NC and gel quality.  
 
 ## Data Description
-
+I make some gel samples with different NC dasage: no NC, 0.1% NC， 0.5% NC, and 1.0% NC. Then we need to collect data to compare their gel quality.  
+Texture Profile Analysis (TPA) test is useful to measure the gel properties like hardness, cohesiveness, springiness, chewiness, resilience, and gel strength. To determine the gel quality of our samples, we will focus on hardness and gel strength, but other properties can help us find the relationship between NC dasage and gel properties.  
+The data I use to analyze is measured on November 12th 2021 by TPA machine in Food Science Building. You can download it here. <a href="https://github.com/JingyiY99/JingyiProject/blob/master/assets/Result_11.12.csv" download>Click to Download</a>  
 
 ## Explore the Data
 
@@ -46,4 +45,4 @@ Our key hypothesis is NC and mTG have the synergistic effects to produce high-qu
 
 
 ## Data Workflow Chart
-
+![Book logo](/JingyiProject/assets/Project Workflow-1.png)
