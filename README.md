@@ -212,6 +212,7 @@ p
 From the plots, we can see the PC1 and PC2 separate the data. The PCA method successfully reduces the variables and simulates a good enough model.
 ## Communciate and visualize the results
 
+## Task for Class
 
 ## Data Workflow Chart
 ![Book logo](/JingyiProject/assets/Project Workflow.png)
