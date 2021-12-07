@@ -68,7 +68,7 @@ Results for 0.5% NC enhanced gel:
 ![alt text](/JingyiProject/assets/0.5NC.PNG)  
 Results for 1.0% NC enhanced gel:  
 ![alt text](/JingyiProject/assets/1.0NC.PNG)  
-There is no obvious issue based on the preliminary summary. Let's dig depper.  
+There is no obvious issue based on the preliminary summary. Let's dig deeper.  
 
 ## Data Visualization
 Boxplot is a good visualization method to show the replationships between NC dosage and each features.
