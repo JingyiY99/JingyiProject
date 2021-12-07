@@ -211,7 +211,14 @@ p
 ![alt text](/JingyiProject/assets/pca2.PNG)  
 From the plots, we can see the PC1 and PC2 separate the data. The PCA method successfully reduces the variables and simulates a good enough model.
 ## Communciate and visualize the results
-
+We find the appropriate Nanocellulose can increase the gel quality from the Data Visualization part. Based on the boxplots, the 0.5% NC enhanced gel has the best performance.  
+The Machine Learning models are helpful to fit my data and simulate the relationship. The performence score for Naive Bayes is 0.6, for SVM is 0.909. The variance check for PCA model is good enough, too. With these models, I can predict the results for new data in the future.  
+The next step for my research is to test the NC dosage around 0.5%, like 0.3~0.8%, to find a more accurate dosage.  
+In this project, I applicate many topics I learned in ABE 516x. For example:  
+(1)Summarizie data through python to describe the basic statistics;  
+(2)Make boxplots to identify of patterns and relationships through python;  
+(3)Use different machine learning tools that I learned in class to fit my data and make predictions.  
+My project is easy to reproduce. You can find the data I used <a href="https://github.com/JingyiY99/JingyiProject/blob/master/assets/Result_11.12.csv" download>here</a>. The TPA test data has its global standard. Therefore, everyone can use their data measured by the TPA test to replace the data in my code. If your data has a different number of features, there would be some error, so please change the number of features in my code to fit your data. The other procedure is the same as I do. The data analysis method I used in the project is reproducible and easy to work through. 
 ## Task for Class
 
 ## Data Workflow Chart
