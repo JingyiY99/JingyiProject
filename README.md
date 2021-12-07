@@ -32,8 +32,43 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 %matplotlib inline
+  
+df = pd.read_csv('Result_11.12.csv')
+df = df.drop(columns=["Distance1","Distance2","Area1","Area2","Area3","Area4"])
+df
 ```
-Then we can calculate the means and standard deviations for each dosage.
+![Book logo](/JingyiProject/assets/Raw data.PNG)
+Then we can calculate the means and standard deviations for each dosage to describe the basic statistics of the features.
+```python
+class0 = df[df["Dosage"]==0]
+class0 = class0.drop(columns=["Dosage"])
+sum0 = class0.describe()
+sum0
+  
+class1 = df[df["Dosage"]==0.1]
+class1 = class1.drop(columns=["Dosage"])
+sum1 = class1.describe()
+sum1
+  
+class2 = df[df["Dosage"]==0.5]
+class2 = class2.drop(columns=["Dosage"])
+sum2 = class2.describe()
+sum2
+  
+class3 = df[df["Dosage"]==1]
+class3 = class3.drop(columns=["Dosage"])
+sum3 = class3.describe()
+sum3
+```
+Results for no NC enhanced gel:  
+![Book logo](/JingyiProject/assets/no NC sum.PNG)  
+Results for 0.1% NC enhanced gel:  
+![Book logo](/JingyiProject/assets/0.1% NC sum.PNG)  
+Results for 0.5% NC enhanced gel:  
+![Book logo](/JingyiProject/assets/0.5% NC sum.PNG)  
+Results for 1.0% NC enhanced gel:  
+![Book logo](/JingyiProject/assets/1.0% NC sum.PNG)  
+There is no obvious issue based on the preliminary summary. Let's dig depper.  
 
 ## Data Visualization
 
